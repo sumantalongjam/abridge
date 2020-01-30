@@ -6,7 +6,7 @@
 
         <variable
             name="viewModel"
-            type="com.longjam.sumanta.abridge.ui.issue_list.IssueListViewModel" />
+            type="com.longjam.sumanta.abridge.ui.issue_detail.IssueDetailViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -27,6 +27,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:viewModel="@{viewModel}" />
+            app:isLoading="@{viewModel.isLoading()}" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

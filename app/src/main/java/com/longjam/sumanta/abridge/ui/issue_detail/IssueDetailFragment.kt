@@ -29,17 +29,11 @@ class IssueDetailFragment : DialogFragment() {
         }
     }
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         dialog?.window?.clearFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN)
-        binding = DataBindingUtil.inflate<FragmentIssueDetailBinding>(
-            inflater,
-            R.layout.fragment_issue_detail,
-            container,
-            false
-        )
+        binding = DataBindingUtil.inflate<FragmentIssueDetailBinding>(inflater, R.layout.fragment_issue_detail, container, false)
+        binding.viewModel = viewModel
+        binding.executePendingBindings()
         return binding.root
     }
 
